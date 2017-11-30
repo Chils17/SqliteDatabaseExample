@@ -39,6 +39,7 @@ public class UpdateActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update);
         getSupportActionBar().setTitle("Update Details");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         getIntentData();
         init();
@@ -129,5 +130,11 @@ public class UpdateActivity extends AppCompatActivity implements View.OnClickLis
         }
 
 
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

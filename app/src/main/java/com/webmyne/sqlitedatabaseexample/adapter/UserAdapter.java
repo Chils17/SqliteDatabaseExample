@@ -97,51 +97,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyViewHolder> 
                     return false;
                 }
             });
-          /*  itemView.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    final CharSequence[] items = {"Edit", "Delete"};
-                    new AlertDialog.Builder(context)
-                            .setTitle("User Records")
-                            .setItems(items, new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    Log.e("item click", "" + i);
-                                    if (i == 0) {
-                                        Intent intent = new Intent(context, UpdateActivity.class);
-                                        intent.putExtra(AppConstants.UserDetail, user);
-                                        context.startActivity(intent);
-                                        userList = (ArrayList<User>) helper.getAllUser();
-                                        notifyDataSetChanged();
-                                    } else if (i == 1) {
-                                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
-                                        alertDialog.setTitle("Confirm Delete...");
-                                        alertDialog.setMessage("Are you sure you want delete this?");
-                                        alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                helper.deleteUser(user);
-                                                userList = (ArrayList<User>) helper.getAllUser();
-                                                notifyDataSetChanged();
-                                                Toast.makeText(context, "You clicked on YES", Toast.LENGTH_SHORT).show();
-                                            }
-                                        });
-
-                                        alertDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                Toast.makeText(context, "You clicked on NO", Toast.LENGTH_SHORT).show();
-                                                dialog.cancel();
-                                            }
-                                        });
-                                        alertDialog.show();
-                                    }
-
-
-                                    dialogInterface.dismiss();
-                                }
-                            }).show();
-                    return false;
-                }
-            });*/
         }
     }
 
