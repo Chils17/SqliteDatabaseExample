@@ -129,7 +129,6 @@ public class UpdateActivity extends AppCompatActivity implements View.OnClickLis
             Snackbar.make(nestedScrollView, getString(R.string.error_email_exists), Snackbar.LENGTH_LONG).show();
         }
 
-
     }
 
     @Override
